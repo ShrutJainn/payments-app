@@ -17,10 +17,7 @@ function App() {
             path="/signin"
             element={token ? <Dashboard /> : <SigninPage />}
           />
-          <Route
-            path="/dashboard"
-            element={!token ? <SigninPage /> : <Dashboard />}
-          />
+          <Route path="/" element={!token ? <SigninPage /> : <Dashboard />} />
           <Route
             path="/send"
             element={!token ? <SigninPage /> : <SendMoney />}
